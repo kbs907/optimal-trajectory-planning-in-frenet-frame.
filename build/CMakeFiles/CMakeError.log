@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/kbs/xycar_ws/programmers_sdv/project_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f027a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f027a.dir/build.make CMakeFiles/cmTC_f027a.dir/build
+make[1]: Entering directory '/home/kbs/xycar_ws/programmers_sdv/project_ws/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f027a.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_f027a.dir/CheckSymbolExists.c.o   -c /home/kbs/xycar_ws/programmers_sdv/project_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_f027a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f027a.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_f027a.dir/CheckSymbolExists.c.o  -o cmTC_f027a -rdynamic 
+CMakeFiles/cmTC_f027a.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_f027a.dir/build.make:97: recipe for target 'cmTC_f027a' failed
+make[1]: *** [cmTC_f027a] Error 1
+make[1]: Leaving directory '/home/kbs/xycar_ws/programmers_sdv/project_ws/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_f027a/fast' failed
+make: *** [cmTC_f027a/fast] Error 2
+
+File /home/kbs/xycar_ws/programmers_sdv/project_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/kbs/xycar_ws/programmers_sdv/project_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_19cb5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_19cb5.dir/build.make CMakeFiles/cmTC_19cb5.dir/build
+make[1]: Entering directory '/home/kbs/xycar_ws/programmers_sdv/project_ws/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_19cb5.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_19cb5.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_19cb5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_19cb5.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_19cb5.dir/CheckFunctionExists.c.o  -o cmTC_19cb5 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_19cb5.dir/build.make:97: recipe for target 'cmTC_19cb5' failed
+make[1]: *** [cmTC_19cb5] Error 1
+make[1]: Leaving directory '/home/kbs/xycar_ws/programmers_sdv/project_ws/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_19cb5/fast' failed
+make: *** [cmTC_19cb5/fast] Error 2
+
+

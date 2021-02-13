@@ -1,0 +1,8 @@
+prefix=/home/kbs/xycar_ws/programmers_sdv/project_ws/devel
+
+Name: map_server
+Description: Description of map_server
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

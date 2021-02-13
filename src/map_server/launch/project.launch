@@ -1,0 +1,8 @@
+<launch>
+	<node name="rviz_visualizer" pkg="rviz" type="rviz" required="true"
+		args="-d /home/kbs/xycar_ws/programmers_sdv/project_ws/rviz.config.rviz"/>
+	<node name = "map_rviz_visualizer" pkg = "map_server" type = "map_visualizer.py" />
+	<node name = "parking_car" pkg = "obstacles" type = "parking_car.py" />
+	<node name = "collision_checking_marker_node" pkg = "obstacles" type = "collision_check_with_visualizing_car.py" output = "screen" />
+	<node name = "three_cv_agents_node_1" pkg = "cv_agents" type = "spawn_agent.py" output = "screen" />
+</launch>

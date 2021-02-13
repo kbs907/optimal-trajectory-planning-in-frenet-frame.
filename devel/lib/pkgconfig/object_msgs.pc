@@ -1,0 +1,8 @@
+prefix=/home/kbs/xycar_ws/programmers_sdv/project_ws/devel
+
+Name: object_msgs
+Description: Description of object_msgs
+Version: 0.0.0
+Cflags: -I/home/kbs/xycar_ws/programmers_sdv/project_ws/devel/include
+Libs: -L${prefix}/lib 
+Requires: geometry_msgs std_msgs message_runtime
